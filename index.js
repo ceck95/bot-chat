@@ -9,6 +9,10 @@ login({email: "sunnyboy1019@gmail.com", password: "lialone"}, function callback 
     api.listen(function callback(err, message) {
         var ID = message.threadID;
         var strmessage = message.body;
+        if(strmessage == null){
+            strmessage = 'hinh anh';
+        }
+        console.log(strmessage);
         if(strmessage == '/whoami'){
             api.getUserInfo(message.threadID,function(err, data) {
               if(err) return console.error(err);
