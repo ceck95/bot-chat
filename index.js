@@ -3,7 +3,7 @@ var request = require('request');
 var answeredThreads = {};
  
 // Create simple echo bot
-login({email: "sunnyboy1019@gmail.com", password: "lialone"}, function callback (err, api) {
+login({email: "sunnyboy1019@gmail.com", password: ""}, function callback (err, api) {
     if(err) return console.error(err);
  	// console.log('api: ',api)
     api.listen(function callback(err, message) {
